@@ -76,14 +76,35 @@ $ uname -a
 Linux debian 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64 GNU/Linux
 ```
 
-## Create for your own project a project folder in the Linux console (terminal ,bash shell), e.g. in your your own home directory, and then open this folder as a new project in the MS VSCODE program
+## IDE - MS Visual Studio Code
+
+```text
+Version: 1.100.2
+Commit: 848b80aeb52026648a8ff9f7c45a9b0a80641e2e
+Date: 2025-05-14T21:47:40.416Z
+Electron: 34.5.1
+ElectronBuildId: 11369351
+Chromium: 132.0.6834.210
+Node.js: 20.19.0
+V8: 13.2.152.41-electron.0
+OS: Linux x64 6.1.0-34-amd64
+```
+
+## Create new folder for these project
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 # cd && mkdir <project_name folder> && cd $_
 # command 'cd' change to home folder from logged in user
-cd && mkdir rust-example-cov && cd $_ 
+cd && mkdir prompt_rust_ibkr_search_put_ratio_credit_spread && cd $_ 
 ```
 <!-- -->
+## Oen the project folder in MS studio code
+
+```bash <!-- markdownlint-disable-line code-block-style -->
+# code <folder path>
+code prompt_rust_ibkr_search_put_ratio_credit_spread
+```
+
 >[!TIP]
 > Don't forget to save your project on GitHub - saves you serious headaches
 <!-- -->
@@ -104,8 +125,35 @@ touch README.md \
 && rustup toolchain install stable \
 && rustup update  --force \
 && rustup show \
-&& mkdir tests
+&& cargo build \
+&& cargo run \
+&& cargo build --examples \
+&& cargo run --example example \
+&& mkdir tests  
 ```
+
+## No test existing
+
+- command
+
+```bash
+cargo test
+```
+
+- output
+
+```txt
+ Finished `test` profile [unoptimized + debuginfo] target(s) in 0.06s
+     Running unittests src/main.rs (target/debug/deps/prompt_rust_ibkr_search_put_ratio_credit_spread-aad63c388e7d2ce9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+```
+
+## Empty test file without any testcase
+
+
 <!-- -->
 >[!TIP]
 > How to cat ```<<EOF>>``` a file containing code
@@ -113,6 +161,8 @@ touch README.md \
 >
 ><!--- THis empty line inside the block is necessary for correct format -->
 <!-- -->
+
+## CReate first simple testcase
 
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg

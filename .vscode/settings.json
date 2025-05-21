@@ -1,8 +1,11 @@
 {
     "cSpell.words": [
+        "debuginfo",
         "ibkr",
         "lshw",
         "rustup",
-        "trapapa"
+        "trapapa",
+        "unittests",
+        "vcode"
     ]
 }
