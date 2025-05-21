@@ -151,8 +151,7 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 ```
 
-## Empty test file without any testcase
-
+## Empty testfile without any testcase
 
 <!-- -->
 >[!TIP]
@@ -162,7 +161,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 ><!--- THis empty line inside the block is necessary for correct format -->
 <!-- -->
 
-## CReate first simple testcase
+## Create first simple testcase
 
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg

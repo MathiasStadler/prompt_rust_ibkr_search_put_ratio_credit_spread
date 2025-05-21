@@ -1,0 +1,24 @@
+src/lib.rs:
+pub fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+tests/test_main.rs:
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_add() {
+        assert_eq!(add(2, 3), 5);
+    }
+}
+
+tests/test_empty.rs:
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn placeholder() {
+        assert!(true);
+    }
+}
