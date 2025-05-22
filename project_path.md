@@ -163,5 +163,8 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 
 ## Create first simple testcase
 
+```{include} ./sources.md
+```
+
 <!-- Link sign - Don't Found a better way :-( - You know a better method? - send me a email -->
 [1]: ./img/link_symbol.svg
