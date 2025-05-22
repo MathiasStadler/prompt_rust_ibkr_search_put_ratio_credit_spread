@@ -1,6 +1,12 @@
-# Project name =>  prompt_rust_ibkr_search_put_ratio_credit_spread
+# The detailed project path  
 
-## Start Date of project
+## Project name => prompt_rust_ibkr_search_put_ratio_credit_spread
+
+## Project target
+
+- search/scan for profitable put ratio credit spread
+
+## Project start date
 
 ```bash <!-- markdownlint-disable-line code-block-style -->
 $ date
