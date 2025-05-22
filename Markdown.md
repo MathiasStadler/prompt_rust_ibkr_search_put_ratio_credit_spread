@@ -1,7 +1,7 @@
 # markdown gesammelte werke
 
 > [NOTE!]
-> Tab space in Markdown [![alt text][1]](https://stackoverflow.com/questions/40023013/tab-space-in-markdown)
+> Tab space in Markdown [![alt text][0]](https://stackoverflow.com/questions/40023013/tab-space-in-markdown)
 >
 >```bash
 >Type nbsp to add a single space.
@@ -12,4 +12,4 @@
 >Please append & in the beginning and ; in the end of the above suggested space syntax
 ```
 
-[1]: ./img/link_symbol.svg
+[0]: ./img/link_symbol.svg
