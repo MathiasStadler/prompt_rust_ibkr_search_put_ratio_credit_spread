@@ -5,7 +5,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::io::Write;
+    use std::io::{self, Write};
 
     #[test]
     fn test_main_output() {
