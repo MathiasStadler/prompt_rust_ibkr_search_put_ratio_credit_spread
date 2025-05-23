@@ -5,8 +5,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::io::{self, Write};
-     use std::sync::Mutex;
+    use std::io::Write;
 
     #[test]
     fn test_main_output() {
@@ -26,26 +25,23 @@ mod tests {
 
     #[test]
     fn test_console_output() {
-        // Set up stdout capture with thread-safe buffer
-        let buffer = Mutex::new(Vec::new());
-        let stdout = io::stdout();
-        let mut handle = stdout.lock();
+        use std::io::{Cursor};
+        use std::panic;
 
-        // Redirect stdout and execute main
+        // Redirect stdout to a buffer
+        let mut buffer = Vec::new();
         {
-            let result = std::panic::catch_unwind(|| {
-                let mut locked_buffer = buffer.lock().unwrap();
-                writeln!(locked_buffer, "Hello, world!").unwrap();
-                handle.write_all(&locked_buffer).unwrap();
-                handle.flush().unwrap();
+            let  _cursor = Cursor::new(&mut buffer);
+            let result = panic::catch_unwind(|| {
+                // Call main() which will write to our buffer
+                main();
             });
             assert!(result.is_ok());
         }
 
-        // Check captured output
-        let locked_buffer = buffer.lock().unwrap();
-        let output = String::from_utf8_lossy(&locked_buffer);
+        // Check if the buffer contains our expected output
+        let output = String::from_utf8_lossy(&buffer);
         assert!(output.contains("Hello, world!"), 
-            "Expected 'Hello, world!' in output, got: {}", output);
+            "Expected console output to contain 'Hello, world!', got: {}", output);
     }
 }
