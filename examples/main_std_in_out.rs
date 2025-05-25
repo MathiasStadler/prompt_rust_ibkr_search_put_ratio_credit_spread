@@ -1,3 +1,10 @@
+// cargo build --example main_std_in_out 
+// cargo run --example main_std_in_out
+
+//cargo tarpaulin --example main_std_in_out  --ignore-tests --target-dir $PWD/target/tarpaulin --skip-clean --out Lcov
+
+// exact one testcase
+// cargo test --example main_std_in_out -- test_program_input_output --exact --show-output
 use std::fmt::Error;
 fn main() -> Result<(),Error>{
     // This is a simple program that reads input from the user and prints it.
@@ -6,7 +13,7 @@ fn main() -> Result<(),Error>{
         std::io::stdin().read_line(&mut _input).unwrap();
         println!("You entered: {}", _input.trim());
         Ok(())
-    }
+    } 
     // Example test (not fully functional)
     #[test]
     fn test_program_input_output() {
@@ -17,9 +24,9 @@ fn main() -> Result<(),Error>{
         // Replace stdin with a mock input stream
         let _ = std::io::stdin().lock();
         let mut _stdout = std::io::stdout();
-        let _result = main();
+        let result = main();
 
-        match (_result){
+        match result{
             Ok(_) => {
                 // Check if the output matches the expected output
                 // This is a placeholder; actual implementation would capture stdout

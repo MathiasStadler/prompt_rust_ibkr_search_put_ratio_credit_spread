@@ -14,3 +14,5 @@ mod my_module { // Replace with the actual module name
     fn main() {
         println!("{}", my_module::add(2, 3)); // Call the function in main
     }
+// command line
+// cargo tarpaulin --ignore-tests --target-dir $PWD/target/tarpaulin --skip-clean --out Lco
