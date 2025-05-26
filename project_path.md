@@ -166,6 +166,21 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; fini
 >
 ><!--- THis empty line inside the block is necessary for correct format -->
 <!-- -->
+>[!TIP]
+>cargo edit [![alt text][1]](https://crates.io/crates/cargo-edit)
+>
+>This tool extends Cargo to allow you to add, remove, and >upgrade dependencies by modifying your Cargo.toml file from >the command line.
+>
+>Currently available subcommands:
+><!-- -->
+>- cargo upgrade
+>- cargo set-version
+><!-- -->
+>Installation
+><!-- -->
+>```bash
+>cargo install cargo-edit
+>```
 
 ## Create first simple testcase
 
