@@ -1,5 +1,5 @@
 fn main(){
-    let s1 = String::from("LGR");
+    let s1 = String::from("My Output");
     println!("{s1}");
 }
 
