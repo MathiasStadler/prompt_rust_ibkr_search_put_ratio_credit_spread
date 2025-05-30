@@ -5,4 +5,5 @@ edition = "2024"
 
 [dependencies]
 cargo-watch = "8.5.3"
+ibapi = "1.1.1"
 rustfmt = "0.10.0"
